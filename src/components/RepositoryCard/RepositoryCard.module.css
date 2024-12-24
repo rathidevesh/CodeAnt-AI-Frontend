@@ -1,0 +1,57 @@
+.card {
+    border-bottom: 1px solid #d5d7da;
+    padding: 24px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .title {
+    color: #181d27;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  .badge {
+    border-radius: 9999px;
+    background: #eff8ff;
+    color: #175cd3;
+    padding: 2px 10px;
+    font-size: 14px;
+    border: 1px solid #b2ddff;
+  }
+  
+  .details {
+    display: flex;
+    margin-top: 12px;
+    gap: 40px;
+    color: #414651;
+  }
+  
+  .language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .languageDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1570ef;
+  }
+  
+  .size {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .sizeIcon {
+    width: 11px;
+    height: 11px;
+  }

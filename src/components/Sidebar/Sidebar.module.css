@@ -1,0 +1,145 @@
+.navigation {
+  background: #fff;
+  border-right: 1px solid #e9eaeb;
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 240px;
+  width: 240px;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transition: width 0.5s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.content.collapsed {
+  /* width: 80px;  */
+  width: 0px; 
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.content.open {
+  width: 240px; /* Expanded width */
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11px;
+  font: 24px/1.1 Satoshi, sans-serif;
+}
+
+.logoImage {
+  width: 28px;
+  height: 28px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  gap: 8px;
+  color: #414651;
+  text-decoration: none;
+}
+
+.navItem.active {
+  background: #1570ef;
+  color: #fff;
+}
+
+.navIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.toggler {
+  display: none;
+  margin-left: auto;
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.togglerOpen {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.searchButton{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    min-width: 80px;
+  }
+
+  .toggler{
+    display: block;
+  }
+
+  .content.collapsed {
+    width: 60px; /* Further reduced width for small screens */
+  }
+
+  .searchButton {
+    width: 92vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .searchInput {
+    margin-top: 20px;
+    border: 0.5px;
+  }
+
+  .logo{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+  }
+}
